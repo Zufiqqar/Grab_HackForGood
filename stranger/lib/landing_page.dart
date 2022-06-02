@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stranger/model/colour.dart';
@@ -26,26 +27,24 @@ class LandingPageState extends State<LandingPage> {
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
-            // Positioned(
-            //   top: height - (width + width * 0.05),
-            //   child: CachedNetworkImage(
-            //     placeholder: placeholderWidgetFn() as Widget Function(BuildContext, String)?,
-            //     imageUrl: ic_app_background,
-            //     height: width + width * 0.05,
-            //     width: width,
-            //     fit: BoxFit.fill,
-            //   ),
-            // ),
+            Positioned(
+              top: deviceHeight*0.3,
+              child: Container(
+                height: deviceHeight,
+                width: deviceWidth,
+                child: Image.asset('image/drstrange.jpg'),
+              )
+            ),
             SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    // Image.asset(
-                    //   ic_app_icon,
-                    //   width: width * 0.22,
-                    // ),
+                    Image.asset(
+                      "image/ic_app_icon.png",
+                      width: deviceWidth* 0.22,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -113,7 +112,7 @@ class LandingPageState extends State<LandingPage> {
                               borderSide: BorderSide(color: Colors.transparent, style: BorderStyle.none, width: 0))),
                     ),
                     SizedBox(
-                      height: deviceHeight*0.01,
+                      height: deviceHeight*0.05,
                     ),
                     SizedBox(
                       width: double.infinity,
@@ -122,23 +121,23 @@ class LandingPageState extends State<LandingPage> {
                       child: MaterialButton(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
-                          'Sign Up',
+                          'Sign In',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: Font().large1,
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold
                           ),
                         ),
-                        textColor: Col().AppTextColorPrimary,
+                        textColor: Col().greenDark,
                         shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40.0)),
-                        color: Col().AppTextColorPrimary,
+                        color: Col().greenDark,
                         onPressed: () => {
                           // ShHomeScreen().launch(context),
                         },
                       ),
                     ),
-                    SizedBox(height: deviceHeight*0.01),
+                    SizedBox(height: deviceHeight*0.03),
                     SizedBox(
                       width: double.infinity,
                       height: 50,
@@ -150,14 +149,14 @@ class LandingPageState extends State<LandingPage> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: Font().large1,
-                              color: Colors.black,
+                              color: Col().greenDark,
                               fontWeight: FontWeight.bold
                           ),
                         ),
                         textColor: Col().newDarkGreen,
                         shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40.0),
-                            side: BorderSide(color: Col().purpleBackground, width: 1)),
-                        color: Col().AppTextColorPrimary,
+                            side: BorderSide(color: Col().greenDark, width: 1)),
+                        color: Colors.white,
                         onPressed: () => {
                           // ShSignUp().launch(context)
                         },
