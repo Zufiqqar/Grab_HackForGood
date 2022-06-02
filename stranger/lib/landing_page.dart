@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stranger/model/colour.dart';
 import 'package:stranger/model/font.dart';
+import 'package:stranger/view/home/home_page.dart';
 
 
 class LandingPage extends StatefulWidget {
@@ -133,7 +134,11 @@ class LandingPageState extends State<LandingPage> {
                         shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40.0)),
                         color: Col().greenDark,
                         onPressed: () => {
-                          // ShHomeScreen().launch(context),
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()),
+                                  (route) => false)
                         },
                       ),
                     ),
