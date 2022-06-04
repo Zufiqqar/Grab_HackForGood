@@ -4,7 +4,6 @@ import 'package:stranger/model/colour.dart';
 import 'package:stranger/model/font.dart';
 import 'package:stranger/view/home/home_page.dart';
 
-
 class LandingPage extends StatefulWidget {
   static String tag = '/LandingPage';
 
@@ -28,13 +27,12 @@ class LandingPageState extends State<LandingPage> {
           alignment: Alignment.center,
           children: <Widget>[
             Positioned(
-              top: deviceHeight*0.3,
-              child: Container(
-                height: deviceHeight,
-                width: deviceWidth,
-                child: Image.asset('image/drstrange.jpg'),
-              )
-            ),
+                top: deviceHeight * 0.3,
+                child: Container(
+                  height: deviceHeight,
+                  width: deviceWidth,
+                  child: Image.asset('image/drstrange.jpg'),
+                )),
             SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
@@ -43,7 +41,7 @@ class LandingPageState extends State<LandingPage> {
                   children: <Widget>[
                     Image.asset(
                       "image/ic_app_icon.png",
-                      width: deviceWidth* 0.22,
+                      width: deviceWidth * 0.22,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -54,8 +52,7 @@ class LandingPageState extends State<LandingPage> {
                           style: TextStyle(
                               fontSize: Font().large1,
                               color: Colors.black,
-                              fontWeight: FontWeight.bold
-                          ),
+                              fontWeight: FontWeight.bold),
                         ),
                         Text(
                           'Stranger',
@@ -63,40 +60,51 @@ class LandingPageState extends State<LandingPage> {
                           style: TextStyle(
                               fontSize: Font().large1,
                               color: Colors.black,
-                              fontWeight: FontWeight.bold
-                          ),
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
                     SizedBox(
-                      height: deviceHeight*0.01,
+                      height: deviceHeight * 0.01,
                     ),
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       autofocus: false,
                       controller: emailCont,
                       textCapitalization: TextCapitalization.words,
-                      style: TextStyle(color: Col().ColorPrimary, fontSize: Font().medium1),
+                      style: TextStyle(
+                          color: Col().ColorPrimary, fontSize: Font().medium1),
                       decoration: InputDecoration(
                           filled: true,
                           fillColor: Col().Splash,
                           focusColor: Col().blueBackground,
                           hintText: "Email",
-                          hintStyle: TextStyle(color: Col().orangeBackground, fontSize: Font().medium1),
-                          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                          focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0),
-                              borderSide: BorderSide(color: Col().AppTextColorPrimary, width: 0.5)),
-                          enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0),
-                              borderSide: BorderSide(color: Colors.transparent, style: BorderStyle.none, width: 0))),
+                          hintStyle: TextStyle(
+                              color: Col().orangeBackground,
+                              fontSize: Font().medium1),
+                          contentPadding:
+                              EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32.0),
+                              borderSide: BorderSide(
+                                  color: Col().AppTextColorPrimary,
+                                  width: 0.5)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32.0),
+                              borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  style: BorderStyle.none,
+                                  width: 0))),
                     ),
                     SizedBox(
-                      height: deviceHeight*0.01,
+                      height: deviceHeight * 0.01,
                     ),
                     TextFormField(
                       keyboardType: TextInputType.text,
                       autofocus: false,
                       obscureText: true,
-                      style: TextStyle(color: Col().ColorPrimary, fontSize: Font().medium1),
+                      style: TextStyle(
+                          color: Col().ColorPrimary, fontSize: Font().medium1),
                       controller: passwordCont,
                       textCapitalization: TextCapitalization.words,
                       decoration: InputDecoration(
@@ -104,15 +112,25 @@ class LandingPageState extends State<LandingPage> {
                           fillColor: Col().Splash,
                           focusColor: Col().blueBackground,
                           hintText: "Password",
-                          hintStyle: TextStyle(color: Col().orangeBackground, fontSize: Font().medium1),
-                          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                          focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0),
-                              borderSide: BorderSide(color: Col().AppTextColorPrimary, width: 0.5)),
-                          enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0),
-                              borderSide: BorderSide(color: Colors.transparent, style: BorderStyle.none, width: 0))),
+                          hintStyle: TextStyle(
+                              color: Col().orangeBackground,
+                              fontSize: Font().medium1),
+                          contentPadding:
+                              EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32.0),
+                              borderSide: BorderSide(
+                                  color: Col().AppTextColorPrimary,
+                                  width: 0.5)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32.0),
+                              borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  style: BorderStyle.none,
+                                  width: 0))),
                     ),
                     SizedBox(
-                      height: deviceHeight*0.05,
+                      height: deviceHeight * 0.05,
                     ),
                     SizedBox(
                       width: double.infinity,
@@ -126,22 +144,22 @@ class LandingPageState extends State<LandingPage> {
                           style: TextStyle(
                               fontSize: Font().large1,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold
-                          ),
+                              fontWeight: FontWeight.bold),
                         ),
                         textColor: Col().greenDark,
-                        shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40.0)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(40.0)),
                         color: Col().greenDark,
                         onPressed: () => {
                           Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => HomePage()),
-                                  (route) => false)
+                              (route) => false)
                         },
                       ),
                     ),
-                    SizedBox(height: deviceHeight*0.03),
+                    SizedBox(height: deviceHeight * 0.03),
                     SizedBox(
                       width: double.infinity,
                       height: 50,
@@ -154,11 +172,11 @@ class LandingPageState extends State<LandingPage> {
                           style: TextStyle(
                               fontSize: Font().large1,
                               color: Col().greenDark,
-                              fontWeight: FontWeight.bold
-                          ),
+                              fontWeight: FontWeight.bold),
                         ),
                         textColor: Col().newDarkGreen,
-                        shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40.0),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(40.0),
                             side: BorderSide(color: Col().greenDark, width: 1)),
                         color: Colors.white,
                         onPressed: () => {
