@@ -45,6 +45,14 @@ class NavigationDrawer extends StatelessWidget {
           Navigator.of(context).pushReplacementNamed('/accountSettings');
         },
       ),
+      const SizedBox(height: 8),
+      TextButton(
+        child: const Text("schedule-testing"),
+        onPressed: () {
+          Navigator.of(context).pop();
+          Navigator.of(context).pushReplacementNamed('/schedule');
+        },
+      ),
     ]));
   }
 }

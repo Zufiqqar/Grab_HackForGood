@@ -8,6 +8,7 @@ import 'my_notifications_page.dart';
 import 'create_schedule_page.dart';
 import 'account_settings_page.dart';
 import 'landing_page.dart';
+import 'schedule_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       //home: const MyHomePage(title: "My Flutter App"),
       initialRoute: '/publicSchedules',
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => const LandingPage(),
+        //  '/': (BuildContext context) => const LandingPage(),
         '/publicSchedules': (BuildContext context) =>
             const PublicSchedulesPage(),
         '/mySchedules': (BuildContext context) => const MyTestPage(),
@@ -44,7 +45,8 @@ class MyApp extends StatelessWidget {
             const MyNotificationsPage(),
         '/createSchedule': (BuildContext context) => const CreateSchedulePage(),
         '/accountSettings': (BuildContext context) =>
-            const AccountSettingsPage()
+            const AccountSettingsPage(),
+        '/schedule': (BuildContext context) => const SchedulePage(),
       },
     );
   }
