@@ -64,7 +64,6 @@ class Col {
   final Color AppDividerColor = Color(0xFFDADADA);
   final Color homebutton = Color(0xFF55ac89);
 
-
   final Color ColorPrimary2 = Color(0xFFead3d3);
   final Color BackGroundColor2 = Color(0xFFead3d3);
   final Color NotificationBadge = Color(0xFFfff799);
@@ -83,5 +82,4 @@ class Font {
   final double h7 = 11;
   final double h8 = 10;
   final double homescreen_title = 36;
-
 }

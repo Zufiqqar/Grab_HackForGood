@@ -23,7 +23,7 @@ class Schedule {
 
 //ScheduleForm
 class ScheduleForm {
-  final String to
+  final String to = '0';
 }
 
 //Notification
