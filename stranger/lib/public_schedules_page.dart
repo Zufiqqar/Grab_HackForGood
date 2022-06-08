@@ -23,7 +23,9 @@ class _PublicSchedulesPageState extends State<PublicSchedulesPage> {
     var deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: true,
+        elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.black),
         actions: <Widget>[
           IconButton(
@@ -57,9 +59,10 @@ class _PublicSchedulesPageState extends State<PublicSchedulesPage> {
               child: Stack(
                 children: [
                   Container(
+                    width: deviceWidth*0.95,
                     margin: const EdgeInsets.only(top: 8.0),
                     decoration: boxDecorationWithRoundedCorners(
-                      backgroundColor: context.cardColor,
+                      backgroundColor: Col().ColorPrimary3,
                       borderRadius: BorderRadius.circular(20),
                       // border: Border.all(color: Colors.grey.withOpacity(0.2)),
                       boxShadow: [
@@ -80,28 +83,28 @@ class _PublicSchedulesPageState extends State<PublicSchedulesPage> {
                           children: [
                             Container(
                               // height: deviceHeight*0.1,
-                              width: deviceWidth*0.1,
-                              decoration: boxDecorationWithRoundedCorners(backgroundColor: context.cardColor,
+                              // width: deviceWidth*0.1,
+                              decoration: boxDecorationWithRoundedCorners(backgroundColor: Col().ColorPrimary3,
                                 borderRadius: radius(12),
                               // border: Border.all(color: Colors.blueAccent),
                               ),
                               child: Text("To:",
-                                style: boldTextStyle(size: 12, color: Colors.black),
+                                style: secondaryTextStyle(size: Font().small.toInt(), color: Colors.black),
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                               ),
                                   // Text((e.month).validate(), style: secondaryTextStyle(color: white)),
-                            ),
+                            ).paddingRight(deviceWidth*0.01),
                             Container(
                               // height: deviceHeight*0.1,
                               // width: deviceWidth*0.1,
-                              decoration: boxDecorationWithRoundedCorners(backgroundColor: context.cardColor,
+                              decoration: boxDecorationWithRoundedCorners(backgroundColor: Col().ColorPrimary3,
                                 borderRadius: radius(12),
                                 // border: Border.all(color: Colors.blueAccent),
                               ),
                               child: Text("Block 40 Bus Stop",
-                                style: boldTextStyle(size: 12, color: Colors.black),
+                                style: boldTextStyle(size: Font().small.toInt(), color: Colors.black),
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
@@ -109,27 +112,101 @@ class _PublicSchedulesPageState extends State<PublicSchedulesPage> {
                               // Text((e.month).validate(), style: secondaryTextStyle(color: white)),
                             ),
                           ],
-                        ).paddingOnly(right: deviceWidth*0.04),
-                        SizedBox(
-                          height: deviceHeight * 0.01,
-                        ),
-                        const Divider(thickness: 0.5),
+                        ).paddingOnly(right: deviceWidth*0.04, left: deviceWidth*0.02),
                         SizedBox(
                           height: deviceHeight * 0.01,
                         ),
                         Row(
                           children: [
-                            Text("newdateListstart[count]" + " to " + "newdateListend[count]",
-                                style: secondaryTextStyle(color: Col().ColorPrimary, size: 12)),
+                            Container(
+                              // height: deviceHeight*0.1,
+                              // width: deviceWidth*0.1,
+                              decoration: boxDecorationWithRoundedCorners(backgroundColor: Col().ColorPrimary3,
+                                borderRadius: radius(12),
+                                // border: Border.all(color: Colors.blueAccent),
+                              ),
+                              child: Text("From:",
+                                style: secondaryTextStyle(size: Font().small.toInt(), color: Colors.black),
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.center,
+                              ),
+                              // Text((e.month).validate(), style: secondaryTextStyle(color: white)),
+                            ).paddingRight(deviceWidth*0.01),
+                            Container(
+                              // height: deviceHeight*0.1,
+                              // width: deviceWidth*0.1,
+                              decoration: boxDecorationWithRoundedCorners(backgroundColor: Col().ColorPrimary3,
+                                borderRadius: radius(12),
+                                // border: Border.all(color: Colors.blueAccent),
+                              ),
+                              child: Text("Pasir Ris MRT",
+                                style: boldTextStyle(size: Font().small.toInt(), color: Colors.black),
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.center,
+                              ),
+                              // Text((e.month).validate(), style: secondaryTextStyle(color: white)),
+                            ),
+                          ],
+                        ).paddingOnly(right: deviceWidth*0.04, left: deviceWidth*0.02),
+                        SizedBox(
+                          height: deviceHeight * 0.01,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              // height: deviceHeight*0.1,
+                              // width: deviceWidth*0.1,
+                              decoration: boxDecorationWithRoundedCorners(backgroundColor: Col().ColorPrimary3,
+                                borderRadius: radius(12),
+                                // border: Border.all(color: Colors.blueAccent),
+                              ),
+                              child: Text("Date and Time:",
+                                style: secondaryTextStyle(size: Font().small.toInt(), color: Colors.black),
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.center,
+                              ),
+                              // Text((e.month).validate(), style: secondaryTextStyle(color: white)),
+                            ).paddingRight(deviceWidth*0.01),
+                            Container(
+                              // height: deviceHeight*0.1,
+                              // width: deviceWidth*0.1,
+                              decoration: boxDecorationWithRoundedCorners(backgroundColor: Col().ColorPrimary3,
+                                borderRadius: radius(12),
+                                // border: Border.all(color: Colors.blueAccent),
+                              ),
+                              child: Text("12-12-12, 0900",
+                                style: boldTextStyle(size: Font().small.toInt(), color: Colors.black),
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.center,
+                              ),
+                              // Text((e.month).validate(), style: secondaryTextStyle(color: white)),
+                            ),
+                          ],
+                        ).paddingOnly(right: deviceWidth*0.04, left: deviceWidth*0.02),
+                        SizedBox(
+                          height: deviceHeight * 0.01,
+                        ),
+                        const Divider(thickness: 0.5, color: white,),
+                        SizedBox(
+                          height: deviceHeight * 0.01,
+                        ),
+                        Row(
+                          children: [
+                            Text("Gather Distance:",
+                                style: secondaryTextStyle(color: Col().darkerpurple, size: Font().mini.toInt())),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("More Details", style: secondaryTextStyle(color: Col().ColorPrimary
-                                    , size: 12)),
+                                Text("More Details", style: secondaryTextStyle(color: Col().darkerpurple
+                                    , size: Font().mini.toInt())),
                                 SizedBox(
                                   width: deviceWidth * 0.01,
                                 ),
-                                Icon(Icons.arrow_forward_ios_sharp, color: Col().ColorPrimary,
+                                Icon(Icons.arrow_forward_ios_sharp, color: Col().darkerpurple,
                                     size: 14),
                               ],
                             ).onTap(() async {
