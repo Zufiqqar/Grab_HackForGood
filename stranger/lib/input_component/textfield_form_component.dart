@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 
 class TextFieldForm extends StatefulWidget {
-  const TextFieldForm({Key? key}) : super(key: key);
+  final String labelText;
+  const TextFieldForm({Key? key, required this.labelText}) : super(key: key);
 
   @override
   State<TextFieldForm> createState() => _TextFieldFormState();
 }
 
 class _TextFieldFormState extends State<TextFieldForm> {
+  String? get labelText => widget.labelText;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         hintText: 'Enter your email',
+        labelText: labelText,
       ),
       validator: (String? value) {
         if (value == null || value.isEmpty) {
