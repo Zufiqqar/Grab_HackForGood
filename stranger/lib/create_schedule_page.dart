@@ -37,10 +37,9 @@ class _CreateSchedulePageState extends State<CreateSchedulePage> {
           padding: const EdgeInsets.all(8),
           children: const <Widget>[
             FormParent(children: [
-              Text("From"),
-              TextFieldForm(),
+              TextFieldForm(labelText: "From"),
               Text("To"),
-              TextFieldForm(),
+              TextFieldForm(labelText: "To"),
               Text("Date"),
               CalendarForm(restorationId: 'main'),
               Text("Time Range"),
@@ -48,7 +47,7 @@ class _CreateSchedulePageState extends State<CreateSchedulePage> {
               Text("Capacity"),
               DropdownFieldForm(),
               Text("Invites"),
-              TextFieldForm(),
+              TextFieldForm(labelText: "From"),
               UserCard(),
             ]),
           ],

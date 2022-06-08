@@ -56,7 +56,7 @@ class _MyTestPageState extends State<MyTestPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const FormParent(children: [
-              TextFieldForm(),
+              TextFieldForm(labelText: "text"),
               CalendarForm(restorationId: 'main'),
               DropdownFieldForm()
             ]),
