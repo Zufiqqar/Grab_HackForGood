@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'utils/material_utils.dart';
-//Component Test
-import './input_component/textfield_form_component.dart';
-import './input_component/calendar_form_component.dart';
-import './input_component/form_parent_component.dart';
-import './input_component/dropdownfield_form_component.dart';
-import './generic_component/user_component.dart';
 import 'store_model/model.dart';
 import 'package:intl/intl.dart';
 import './navigation_drawer.dart';
+import './store_model/model.dart';
 
 class CreateSchedulePage extends StatefulWidget {
   const CreateSchedulePage({Key? key}) : super(key: key);
@@ -32,7 +26,7 @@ class _CreateSchedulePageState extends State<CreateSchedulePage> {
       timeRange: selectedTime,
       capacity: capacityContoller.text as int,
       notes: noteController.text,
-      inviteeUID: [],
+      ridersUID: [],
     );
   }
 
