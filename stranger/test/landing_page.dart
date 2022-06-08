@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:stranger/model/colour.dart';
-import 'package:stranger/model/font.dart';
-import 'package:stranger/view/home/home_page.dart';
+// import 'package:stranger/model/colour.dart';
+// import 'package:stranger/model/font.dart';
+// import 'package:stranger/view/home/home_page.dart';
+import 'package:material_color_utilities/material_color_utilities.dart';
+import 'package:stranger/utils/material_utils.dart';
 
 class LandingPage extends StatefulWidget {
   static String tag = '/LandingPage';
@@ -50,7 +52,7 @@ class LandingPageState extends State<LandingPage> {
                           'RideWith',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: Font().large1,
+                              fontSize: Font().large,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -58,7 +60,7 @@ class LandingPageState extends State<LandingPage> {
                           'Stranger',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: Font().large1,
+                              fontSize: Font().large,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
@@ -73,7 +75,7 @@ class LandingPageState extends State<LandingPage> {
                       controller: emailCont,
                       textCapitalization: TextCapitalization.words,
                       style: TextStyle(
-                          color: Col().ColorPrimary, fontSize: Font().medium1),
+                          color: Col().ColorPrimary, fontSize: Font().medium),
                       decoration: InputDecoration(
                           filled: true,
                           fillColor: Col().Splash,
@@ -81,7 +83,7 @@ class LandingPageState extends State<LandingPage> {
                           hintText: "Email",
                           hintStyle: TextStyle(
                               color: Col().orangeBackground,
-                              fontSize: Font().medium1),
+                              fontSize: Font().medium),
                           contentPadding:
                               EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                           focusedBorder: OutlineInputBorder(
@@ -104,7 +106,7 @@ class LandingPageState extends State<LandingPage> {
                       autofocus: false,
                       obscureText: true,
                       style: TextStyle(
-                          color: Col().ColorPrimary, fontSize: Font().medium1),
+                          color: Col().ColorPrimary, fontSize: Font().medium),
                       controller: passwordCont,
                       textCapitalization: TextCapitalization.words,
                       decoration: InputDecoration(
@@ -114,7 +116,7 @@ class LandingPageState extends State<LandingPage> {
                           hintText: "Password",
                           hintStyle: TextStyle(
                               color: Col().orangeBackground,
-                              fontSize: Font().medium1),
+                              fontSize: Font().medium),
                           contentPadding:
                               EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                           focusedBorder: OutlineInputBorder(
@@ -132,33 +134,33 @@ class LandingPageState extends State<LandingPage> {
                     SizedBox(
                       height: deviceHeight * 0.05,
                     ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      // height: double.infinity,
-                      child: MaterialButton(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'Sign In',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: Font().large1,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        textColor: Col().greenDark,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(40.0)),
-                        color: Col().greenDark,
-                        onPressed: () => {
-                          Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomePage()),
-                              (route) => false)
-                        },
-                      ),
-                    ),
+                    // SizedBox(
+                    //   width: double.infinity,
+                    //   height: 50,
+                    //   // height: double.infinity,
+                    //   child: MaterialButton(
+                    //     padding: EdgeInsets.all(8.0),
+                    //     child: Text(
+                    //       'Sign In',
+                    //       textAlign: TextAlign.center,
+                    //       style: TextStyle(
+                    //           fontSize: Font().large,
+                    //           color: Colors.white,
+                    //           fontWeight: FontWeight.bold),
+                    //     ),
+                    //     textColor: Col().greenDark,
+                    //     shape: RoundedRectangleBorder(
+                    //         borderRadius: new BorderRadius.circular(40.0)),
+                    //     color: Col().greenDark,
+                    //     onPressed: () => {
+                    //       Navigator.pushAndRemoveUntil(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //               builder: (context) => HomePage()),
+                    //           (route) => false)
+                    //     },
+                    //   ),
+                    // ),
                     SizedBox(height: deviceHeight * 0.03),
                     SizedBox(
                       width: double.infinity,
@@ -170,7 +172,7 @@ class LandingPageState extends State<LandingPage> {
                           'Sign Up',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: Font().large1,
+                              fontSize: Font().large,
                               color: Col().greenDark,
                               fontWeight: FontWeight.bold),
                         ),
