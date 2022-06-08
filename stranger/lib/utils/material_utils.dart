@@ -53,7 +53,8 @@ class Col {
   final Color refundcolourtxt = Color(0xFF585de9);
 
   final Color Splash = Color(0xFFac5578);
-  final Color ColorPrimary3 = Color(0xFFab92b2);
+  final Color ColorPrimary3 = Color(0xFFcb99c9);
+  final Color darkerpurple = Color(0xFF80007C);
   final Color ColorPrimary4 = Color(0xFFeea292);
   final Color ColorSecondary = Color(0xFF);
   final Color AppTextColorPrimary = Color(0xFF212121);
@@ -63,7 +64,6 @@ class Col {
   final Color AppShadowColor = Color(0x95E9EBF0);
   final Color AppDividerColor = Color(0xFFDADADA);
   final Color homebutton = Color(0xFF55ac89);
-
 
   final Color ColorPrimary2 = Color(0xFFead3d3);
   final Color BackGroundColor2 = Color(0xFFead3d3);
@@ -83,5 +83,4 @@ class Font {
   final double h7 = 11;
   final double h8 = 10;
   final double homescreen_title = 36;
-
 }
