@@ -71,8 +71,23 @@ class AppState {
 
   AppState.initialState()
       : publicSchedulesList = List.unmodifiable(<Schedule>[]),
-        mySchedulesList = List.unmodifiable(<Schedule>[]), 
-        selectedSchedule = Schedule(hostUID: "", fromLoc: "", toLoc: "", date: "", timeRange: "", capacity: "", notes: "", ridersUID: List.unmodifiable(<String>[])),
-        myNotificationsList = List.unmodifiable(<Notification>[])
-        scheduleForm = ScheduleForm(fromLoc: "", toLoc: "", date: "", timeRange: "", capacity: "", notes: "", inviteeUID: List.unmodifiable(<String>[]));
+        mySchedulesList = List.unmodifiable(<Schedule>[]),
+        selectedSchedule = Schedule(
+            hostUID: "",
+            fromLoc: "",
+            toLoc: "",
+            date: "",
+            timeRange: "",
+            capacity: 0,
+            notes: "",
+            ridersUID: List.unmodifiable(<String>[])),
+        myNotificationsList = List.unmodifiable(<Notification>[]),
+        scheduleForm = ScheduleForm(
+            fromLoc: "",
+            toLoc: "",
+            date: "",
+            timeRange: "",
+            capacity: "",
+            notes: "",
+            inviteeUID: List.unmodifiable(<String>[]));
 }
