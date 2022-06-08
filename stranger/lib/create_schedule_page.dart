@@ -38,9 +38,8 @@ class _CreateSchedulePageState extends State<CreateSchedulePage> {
           children: const <Widget>[
             FormParent(children: [
               TextFieldForm(labelText: "From"),
-              Text("To"),
               TextFieldForm(labelText: "To"),
-              Text("Date"),
+              Text("\nDate"),
               CalendarForm(restorationId: 'main'),
               Text("Time Range"),
               DropdownFieldForm(),
