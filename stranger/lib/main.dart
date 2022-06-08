@@ -7,6 +7,7 @@ import 'test_page.dart';
 import 'my_notifications_page.dart';
 import 'create_schedule_page.dart';
 import 'account_settings_page.dart';
+import 'landing_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,11 +31,12 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       //home: const MyHomePage(title: "My Flutter App"),
       initialRoute: '/publicSchedules',
       routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) => const LandingPage(),
         '/publicSchedules': (BuildContext context) =>
             const PublicSchedulesPage(),
         '/mySchedules': (BuildContext context) => const MyTestPage(),
