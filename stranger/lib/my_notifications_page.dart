@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 
 //Component Test
-
-<<<<<<< Updated upstream
 import 'generic_component/notification_card_component.dart';
-=======
-import './generic_component.dart/notification_card_component.dart';
->>>>>>> Stashed changes
-
 import './navigation_drawer.dart';
 
 class MyNotificationsPage extends StatefulWidget {
