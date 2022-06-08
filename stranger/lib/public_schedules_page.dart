@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //Component Test
-import 'generic_component.dart/schedule_card_component.dart';
+import 'generic_component/schedule_card_component.dart';
 
 import './navigation_drawer.dart';
 
