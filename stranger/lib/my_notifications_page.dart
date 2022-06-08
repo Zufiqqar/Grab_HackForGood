@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 //Component Test
 
-import './generic_component.dart/notification_component.dart';
+import 'generic_component/notification_card_component.dart';
 
 import './navigation_drawer.dart';
 

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 //Component Test
 import './input_component/textfield_form_component.dart';
 import './input_component/calendar_form_component.dart';
-import 'generic_component.dart/notification_card_component.dart';
+import 'generic_component/notification_card_component.dart';
 import './input_component/form_parent_component.dart';
 import './input_component/dropdownfield_form_component.dart';
-import './generic_component.dart/user_component.dart';
+import './generic_component/user_component.dart';
 
 import './navigation_drawer.dart';
 
