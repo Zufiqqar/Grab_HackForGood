@@ -46,6 +46,7 @@ dependencies:
   flutter_redux: ^0.10.0
   redux_saga : ^3.0.6
   dotted_border: ^2.0.0+2
+  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,7 @@ flutter:
     - image/drstrange.jpg
     - image/ic_app_icon.png
     - image/
+    - .env
 
   # To add assets to your application, add an assets section, like this:
   # assets:

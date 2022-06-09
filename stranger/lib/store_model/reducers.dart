@@ -1,55 +1,118 @@
 // import 'package:stranger/my_notifications_page.dart';
 
 import 'model.dart';
+import 'actions.dart';
 import 'package:redux/redux.dart';
 
-// enum Actions { Increment }
-
-// List<Item> addItemReducer(List<Schedule> state, action) {
-//   return []
-//     ..addAll(state)
-//     ..add(Item(id: action.id, body: action.item));
-// }
-
-// List<Item> removeItemReducer(List<Item> state, action) {
-//   return List.unmodifiable(List.from(state)..remove(action.item));
-// }
-
-// List<Item> removeItemsReducer(List<Item> state, action) {
-//   return List.unmodifiable([]);
-// }
-
-// final Reducer<List<Item>> itemsReducer = combineReducers<List<Item>>([
-//   new TypedReducer<List<Item>, AddItemAction>(addItemReducer),
-//   new TypedReducer<List<Item>, RemoveItemAction>(removeItemReducer),
-//   new TypedReducer<List<Item>, RemoveItemsAction>(removeItemsReducer),
-// ]);
-
-// int incrementReducer(int state, action) {
-//   if (action == Actions.Increment) {
-//     return state + 1;
-//   }
+//publicSchedulesList
+final publicSchedulesListReducer = combineReducers<List<Schedule>>([
+  TypedReducer<List<Schedule>, AddPublicSchedule>(
+      _addPublicSchedulesListReducer),
+  TypedReducer<List<Schedule>, RemovePublicSchedule>(
+      _removePublicSchedulesListReducer),
+  TypedReducer<List<Schedule>, ClearAllPublicSchedule>(
+      _clearPublicSchedulesListReducer),
+  TypedReducer<List<Schedule>, LoadPublicScheduleSucceed>(
+      _loadPublicSchedulesListReducer),
+]);
+// List<Schedule> publicSchedulesListReducer(List<Schedule> state, action) {
 //   return state;
 // }
 
-//publicSchedulesList
-List<Schedule> publicSchedulesListReducer(List<Schedule> state, action) {
+List<Schedule> _addPublicSchedulesListReducer(
+    List<Schedule> state, AddPublicSchedule action) {
+  return state;
+}
+
+List<Schedule> _removePublicSchedulesListReducer(
+    List<Schedule> state, RemovePublicSchedule action) {
+  return state;
+}
+
+List<Schedule> _clearPublicSchedulesListReducer(
+    List<Schedule> state, ClearAllPublicSchedule action) {
+  return state;
+}
+
+List<Schedule> _loadPublicSchedulesListReducer(
+    List<Schedule> state, LoadPublicScheduleSucceed action) {
   return state;
 }
 
 //mySchedulesList
-List<Schedule> mySchedulesListReducer(List<Schedule> state, action) {
+
+final mySchedulesListReducer = combineReducers<List<Schedule>>([
+  TypedReducer<List<Schedule>, AddMySchedule>(_addMySchedulesListReducer),
+  TypedReducer<List<Schedule>, RemoveMySchedule>(_removeMySchedulesListReducer),
+  TypedReducer<List<Schedule>, ClearAllMySchedule>(
+      _clearMySchedulesListReducer),
+]);
+// List<Schedule> mySchedulesListReducer(List<Schedule> state, action) {
+//   return state;
+// }
+
+List<Schedule> _addMySchedulesListReducer(
+    List<Schedule> state, AddMySchedule action) {
+  return state;
+}
+
+List<Schedule> _removeMySchedulesListReducer(
+    List<Schedule> state, RemoveMySchedule action) {
+  return state;
+}
+
+List<Schedule> _clearMySchedulesListReducer(
+    List<Schedule> state, ClearAllMySchedule action) {
   return state;
 }
 
 //selectedSchedule
-Schedule selectedScheduleReducer(Schedule state, action) {
+
+final selectedScheduleReducer = combineReducers<Schedule>([
+  TypedReducer<Schedule, PickSelectedSchedule>(_pickSelectedScheduleReducer),
+  TypedReducer<Schedule, ResetSelectedSchedule>(_resetSelectedScheduleReducer),
+]);
+// Schedule selectedScheduleReducer(Schedule state, action) {
+//   return state;
+// }
+
+Schedule _pickSelectedScheduleReducer(
+    Schedule state, PickSelectedSchedule action) {
+  return state;
+}
+
+Schedule _resetSelectedScheduleReducer(
+    Schedule state, ResetSelectedSchedule action) {
   return state;
 }
 
 //myNotificationsList
-List<Notification> myNotificationsListReducer(
-    List<Notification> state, action) {
+final myNotificationsListReducer = combineReducers<List<Notification>>([
+  TypedReducer<List<Notification>, AddMyNotification>(
+      _addMyNotificationsListReducer),
+  TypedReducer<List<Notification>, RemoveMyNotification>(
+      _removeMyNotificationsListReducer),
+  TypedReducer<List<Notification>, ClearAllMyNotification>(
+      _clearMyNotificationsListReducer),
+]);
+
+// List<Notification> myNotificationsListReducer(
+//     List<Notification> state, action) {
+//   return state;
+// }
+
+List<Notification> _addMyNotificationsListReducer(
+    List<Notification> state, AddMyNotification action) {
+  return state;
+}
+
+List<Notification> _removeMyNotificationsListReducer(
+    List<Notification> state, RemoveMyNotification action) {
+  return state;
+}
+
+List<Notification> _clearMyNotificationsListReducer(
+    List<Notification> state, ClearAllMyNotification action) {
   return state;
 }
 

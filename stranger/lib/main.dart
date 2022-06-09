@@ -7,6 +7,7 @@ import 'package:stranger/store_model/model.dart';
 // import './model/cosnt.dart';
 
 import 'store_model/reducers.dart';
+import 'store_model/middleware/sagas.dart';
 
 import 'public_schedules_page.dart';
 import 'test_page.dart';
@@ -22,8 +23,8 @@ void main() {
       initialState: AppState.initialState(),
       middleware: [applyMiddleware(sagaMiddleware)]);
 
-  //sagaMiddleware.setStore(store);
-  //sagaMiddleware.run(helloSaga);
+  sagaMiddleware.setStore(store);
+  sagaMiddleware.run(rootSaga);
 
   runApp(MyApp(store: store));
 }
