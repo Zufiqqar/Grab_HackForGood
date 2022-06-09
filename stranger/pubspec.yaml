@@ -47,6 +47,7 @@ dependencies:
   redux_saga : ^3.0.6
   dotted_border: ^2.0.0+2
   flutter_dotenv: ^5.0.2
+  flutter_time_picker_spinner: ^2.0.0
 
 dev_dependencies:
   flutter_test:

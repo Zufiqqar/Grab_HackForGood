@@ -17,6 +17,7 @@ class SchedulePage extends StatefulWidget {
 
 class _SchedulePageState extends State<SchedulePage> {
   int _counter = 0;
+  bool showTimer = false;
 
   void _incrementCounter() {
     setState(() {

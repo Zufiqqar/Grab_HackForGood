@@ -53,7 +53,8 @@ class Col {
   final Color refundcolourtxt = Color(0xFF585de9);
 
   final Color Splash = Color(0xFFac5578);
-  final Color ColorPrimary3 = Color(0xFFab92b2);
+  final Color ColorPrimary3 = Color(0xFFcb99c9);
+  final Color darkerpurple = Color(0xFF80007C);
   final Color ColorPrimary4 = Color(0xFFeea292);
   final Color ColorSecondary = Color(0xFF);
   final Color AppTextColorPrimary = Color(0xFF212121);
